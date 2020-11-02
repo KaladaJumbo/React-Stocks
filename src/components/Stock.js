@@ -1,21 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const Stock = () => (
-  <div>
 
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">{
-            //Company Name
-          }</h5>
-        <p className="card-text">{
-            //ticker: stock price
-          }</p>
+const Stock = (props) => {
+
+  const clicked = () => {
+    props.addToPro(props.aStock)
+  }
+
+  return (
+    <div onClick={() => {clicked()}} >
+
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">{props.aStock.name}</h5>
+          <p className="card-text">
+          {props.aStock.ticker}: {props.aStock.price}</p>
+        </div>
       </div>
+
+
     </div>
-
-
-  </div>
-);
+  )
+}
 
 export default Stock

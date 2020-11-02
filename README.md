@@ -8,7 +8,7 @@ The database of stocks can be found in a JSON-server, so before you start your R
 
 ```
 TO INSTALL: npm install -g json-server
-TO START: json-server --watch db.json
+TO START: json-server --watch db.json //done ... yay
 ```
 
 After the stocks are fetched, your job is to:
